@@ -1,0 +1,61 @@
+--
+--CREATE TABLE IF NOT EXISTS departments (
+--    department_id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--    department_name VARCHAR(50) NOT NULL
+--)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+--CREATE TABLE IF NOT EXISTS certifications (
+--    certification_id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--    certification_name VARCHAR(50) NOT NULL,
+--    certification_level INT NOT NULL
+--)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+--CREATE TABLE IF NOT EXISTS employees (
+--    employee_id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--    department_id BIGINT NOT NULL,
+--    employee_name VARCHAR(255) NOT NULL,
+--    employee_name_kana VARCHAR(255),
+--    employee_birth_date DATE,
+--    employee_email VARCHAR(255) NOT NULL,
+--    employee_telephone VARCHAR(50),
+--    employee_login_id VARCHAR(50) NOT NULL,
+--    employee_login_password VARCHAR(100),
+--    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+--)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+--CREATE TABLE IF NOT EXISTS employees_certifications (
+--    employee_certification_id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+--    employee_id BIGINT NOT NULL,
+--    certification_id BIGINT NOT NULL,
+--    start_date DATE NOT NULL,
+--    end_date DATE NOT NULL,
+--    score DECIMAL(10,2) NOT NULL,
+--    FOREIGN KEY (employee_id) REFERENCES employees(employee_id),
+--    FOREIGN KEY (certification_id) REFERENCES certifications(certification_id)
+--)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+--INSERT INTO departments (department_name) VALUES ('Department A');
+--
+--INSERT INTO departments (department_name) VALUES ('Department B');
+--
+--INSERT INTO departments (department_name) VALUES ('Department C');
+--
+--INSERT INTO employees (department_id, employee_name, employee_name_kana, employee_birth_date, employee_email, employee_telephone, employee_login_id, employee_login_password) VALUES (1, 'Hoang Long', 'Hoang Long Kana', '1990-01-01', 'Long@example.com', '123456789', 'long213', 'password');
+--
+--INSERT INTO employees (department_id, employee_name, employee_name_kana, employee_birth_date, employee_email, employee_telephone, employee_login_id, employee_login_password) VALUES (2, 'Hai Hai', 'Hai Kana', '1992-05-15', 'hai@example.com', '987654321', 'hai222', 'password');
+--
+--INSERT INTO employees (department_id, employee_name, employee_name_kana, employee_birth_date, employee_email, employee_telephone, employee_login_id, employee_login_password) VALUES (3, 'Thang', 'Thang Kana', '1988-09-20', 'Thang@example.com', '555555555', 'thang122', 'password');
+--
+--INSERT INTO certifications (certification_name, certification_level) VALUES ('Trình độ tiếng nhật cấp 1', 1);
+--INSERT INTO certifications (certification_name, certification_level) VALUES ('Trình độ tiếng nhật cấp 2', 2);
+--INSERT INTO certifications (certification_name, certification_level) VALUES ('Trình độ tiếng nhật cấp 3', 3);
+--
+--
+--INSERT INTO employees_certifications (employee_id, certification_id, start_date, end_date, score) VALUES (1, 1, '2022-01-01', '2022-12-31', 90.5);
+--
+--INSERT INTO employees_certifications (employee_id, certification_id, start_date, end_date, score) VALUES (2, 2, '2022-02-01', '2022-11-30', 85.0);
+--
+--INSERT INTO employees_certifications (employee_id, certification_id, start_date, end_date, score) VALUES (3, 3, '2022-03-01', '2022-10-31', 92.7);
+--
+----INSERT INTO employees (department_id, employee_name, employee_email, employee_login_id, employee_login_password)
+----VALUES (4, 'Administrator', 'la@luvina.net', 'admin', '$2a$10$r.XIN4K9vTioiuYQwaTop.UVQ5r5FvrKk2V5Orm9Hc6n4i9Tvjthy');
